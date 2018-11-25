@@ -4,20 +4,16 @@ import { Row, Box } from "./lgm-grid.js";
 import { GlobalStyles, FooterLink, FooterRow, FooterPart } from "./style.js";
 import GDPRConsent from "./gdpr-consent.js";
 import Helmet from "react-helmet";
-// import config from "../utils/config";
 
 import faviconico16 from "../assets/favicon-16x16.png";
 import faviconico32 from "../assets/favicon-32x32.png";
 import appletouchicon from "../assets/apple-touch-icon.png";
 import safaripinnedtab from "../assets/safari-pinned-tab.svg";
 
-// import FbLogo from "../assets/fb.png";
 import CookieLogo from "../assets/cookie.png";
 import MailLogo from "../assets/mail.png";
 
 import { fire } from "../utils/fire";
-// import firebase from "firebase/app";
-// import "firebase/auth";
 
 class Layout extends React.Component {
   state = { isSignedIn: false };
@@ -37,7 +33,6 @@ class Layout extends React.Component {
 
   render() {
     const { children, myPath } = this.props;
-    // console.log("l", myPath);
     if (myPath === "/signin") {
       return <div>{children}</div>;
     } else if (myPath === "/signout") {
@@ -132,7 +127,7 @@ class Layout extends React.Component {
             </Row>
             <Row backgroundcolor="#151515">
               <Box color="#e6dbc9">
-                <FooterRow>&#169; 2018 / Jonas Gustafson</FooterRow>
+                <FooterRow>(CC BY 2.5 SE) SVERA/Jonas Gustafson</FooterRow>
               </Box>
             </Row>
           </GlobalStyles>
