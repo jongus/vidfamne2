@@ -3,6 +3,7 @@ import Layout from "../components/layout";
 import { Row, Box } from "../components/lgm-grid.js";
 import Helmet from "react-helmet";
 import config from "../utils/config";
+import { Link } from "gatsby";
 
 export default props => (
   <Layout myPath={props.location.pathname}>
@@ -18,6 +19,7 @@ export default props => (
       <Box>
         <h1>SVERA EDU</h1>
         <p>
+          {console.log("index props", props)}
           Här kommer ett eller flera stycken som beskriver denna tjänst.
           Chambray DIY meditation, flannel activated charcoal lomo church-key
           roof party poke drinking vinegar PBR&B pour-over tumeric affogato.
@@ -48,11 +50,14 @@ export default props => (
         <p>
           Occupy vice cloud bread, truffaut four dollar toast tofu iceland.
           Adaptogen wolf photo booth mixtape edison bulb, chia knausgaard
-          waistcoat tacos man bun schlitz kitsch dreamcatcher. Truffaut neutra
-          tbh, tote bag trust fund semiotics pour-over master cleanse
-          gluten-free seitan. Brunch pour-over chicharrones fashion axe bitters
-          pug etsy. Authentic tumeric four dollar toast, succulents austin
-          chicharrones 90's ethical.
+          waistcoat tacos man bun schlitz kitsch dreamcatcher.
+        </p>
+        <p>
+          För att kunna delta i kursen måste du vara inloggad. Följ bara länken
+          så kommer du efter att du loggat in till kursen.
+        </p>
+        <p>
+          <Link to="/">Grundkurs för funktionärer</Link>
         </p>
       </Box>
     </Row>

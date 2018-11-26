@@ -15,6 +15,4 @@ Här kommer text och bild och video. AXLorem ipsum dolor amet poke shabby chic h
 
 Här kommer text och bild och video. AXLorem ipsum dolor amet poke shabby chic humblebrag pour-over microdosing. Tumeric anim microdosing brunch. Celiac in neutra ut intelligentsia, viral reprehenderit sustainable selfies roof party prism fingerstache keytar. Incididunt health goth culpa, roof party tempor wayfarers ugh....
 
-![test remote](https://www.idg.se/editorial/980/path/1.710887.1542985871!imageUploader/691705798.jpg)
-
 Viral reprehenderit sustainable selfies roof party prism fingerstache keytar

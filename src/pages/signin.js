@@ -4,6 +4,7 @@ import { auth } from "../utils/fire";
 import firebase from "firebase/app";
 import "firebase/auth";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
+import config from "../utils/store";
 
 // firebase.auth.TwitterAuthProvider.PROVIDER_ID,
 

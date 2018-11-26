@@ -4,6 +4,7 @@ import { Row, Box } from "./lgm-grid.js";
 import { GlobalStyles, FooterLink, FooterRow, FooterPart } from "./style.js";
 import GDPRConsent from "./gdpr-consent.js";
 import Helmet from "react-helmet";
+import config from "../utils/config";
 
 import faviconico16 from "../assets/favicon-16x16.png";
 import faviconico32 from "../assets/favicon-32x32.png";
@@ -22,6 +23,7 @@ class Layout extends React.Component {
     if (typeof window !== "undefined") {
       this.unregisterAuthObserver = fire.auth().onAuthStateChanged(user => {
         this.setState({ isSignedIn: !!user });
+        // user ? (store.isSignedIn = true) : (store.isSignedIn = false);
         console.log("user", user);
       });
     }
@@ -38,7 +40,7 @@ class Layout extends React.Component {
     } else if (myPath === "/signout") {
       return <div>{children}</div>;
     } else if (myPath.includes("/secure/") && !this.state.isSignedIn) {
-      return <div>XXX</div>;
+      return <div>Du måste vara inloggad för att se denna sida.</div>;
     } else {
       return (
         <div>
@@ -81,7 +83,7 @@ class Layout extends React.Component {
                   backgroundcolor="#2e3830"
                   color="#e6dbc9"
                   backgroundcolorhover="#151515"
-                  hometext="SVERA utb"
+                  hometext={config.name}
                   homelink="/"
                   homecolor="#e6dbc9"
                 >

@@ -8,9 +8,6 @@ import config from "../utils/config";
 
 const MarkdownFormat = styled.div`
   // Fill with css here for markdown data
-  & h1 {
-    color: #ff0000;
-  }
   & .gatsby-resp-iframe-wrapper {
     margin: 0 16px 0 16px;
   }
@@ -39,7 +36,6 @@ export default ({ data }) => {
       </Helmet>
       <Row backgroundcolor="#e6dbc9" color="#2e3830">
         <Box>
-          <h1>{post.frontmatter.title}</h1>
           <MarkdownFormat dangerouslySetInnerHTML={{ __html: post.html }} />
         </Box>
       </Row>
