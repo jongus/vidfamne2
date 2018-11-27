@@ -23,7 +23,8 @@ class Layout extends React.Component {
     if (typeof window !== "undefined") {
       this.unregisterAuthObserver = fire.auth().onAuthStateChanged(user => {
         this.setState({ isSignedIn: !!user });
-        // user ? (store.isSignedIn = true) : (store.isSignedIn = false);
+        if (this.props.globalSignedIn)
+          this.props.globalSignedIn(this.state.isSignedIn);
         console.log("user", user);
       });
     }
@@ -35,6 +36,7 @@ class Layout extends React.Component {
 
   render() {
     const { children, myPath } = this.props;
+    console.log("Layout props", this.props);
     if (myPath === "/signin") {
       return <div>{children}</div>;
     } else if (myPath === "/signout") {
