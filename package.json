@@ -9,7 +9,7 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
-    "babel-plugin-styled-components": "^1.8.0",
+    "babel-plugin-styled-components": "^1.9.1",
     "firebase": "^5.5.9",
     "gatsby": "^2.0.33",
     "gatsby-plugin-google-analytics": "^2.0.7",
@@ -20,7 +20,7 @@
     "gatsby-remark-copy-linked-files": "^2.0.6",
     "gatsby-remark-images": "^3.0.0",
     "gatsby-remark-responsive-iframe": "^2.0.6",
-    "gatsby-source-filesystem": "^2.0.8",
+    "gatsby-source-filesystem": "^2.0.9",
     "gatsby-transformer-remark": "^2.1.12",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
@@ -29,11 +29,14 @@
     "react-typography": "^0.16.13",
     "styled-components": "^4.1.1",
     "typography": "^0.16.17",
-    "universal-cookie": "^3.0.4",
+    "universal-cookie": "^3.0.6",
     "whatwg-fetch": "^2.0.4"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/jongus/vidfamne2.git"
+  },
+  "devDependencies": {
+    "eslint": "^5.9.0"
   }
 }

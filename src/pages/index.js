@@ -1,20 +1,20 @@
-import React from "react";
-import Layout from "../components/layout";
-import { Row, Box } from "../components/lgm-grid.js";
-import Helmet from "react-helmet";
-import config from "../utils/config";
-import { Link } from "gatsby";
+import React from "react"
+import Layout from "../components/layout"
+import { Row, Box } from "../components/lgm-grid.js"
+import Helmet from "react-helmet"
+import config from "../utils/config"
+import { Link } from "gatsby"
 
 class index extends React.Component {
-  state = { isSignedIn: false };
+  state = { isSignedIn: false }
 
   globalSignedIn = data => {
-    console.log("dataFromChild", data);
-    this.setState({ isSignedIn: data });
-  };
+    console.log("dataFromChild", data)
+    this.setState({ isSignedIn: data })
+  }
 
   render() {
-    console.log("testx render props", this.props);
+    // console.log("testx render props", this.props);
     return (
       <Layout
         myPath={this.props.location.pathname}
@@ -36,41 +36,32 @@ class index extends React.Component {
         </Helmet>
         <Row backgroundcolor="#e6dbc9">
           <Box>
-            <h1>SVERA EDU</h1>
+            <h1>SVERA Utbildnings portal</h1>
             <p>
-              {console.log("index props", this.props)}
-              Här kommer ett eller flera stycken som beskriver denna tjänst.
-              Chambray DIY meditation, flannel activated charcoal lomo
-              church-key roof party poke drinking vinegar PBR&B pour-over
-              tumeric affogato. Selfies listicle semiotics typewriter, cloud
-              bread venmo tbh meggings tousled succulents. Pok pok ramps schlitz
-              you probably haven't heard of them actually, post-ironic fixie
-              seitan lo-fi ethical. Thundercats banh mi cardigan meggings kale
-              chips.
-            </p>
-            <p>
-              Tousled unicorn kogi +1 messenger bag, cold-pressed post-ironic
-              XOXO. Squid next level VHS portland cray, umami crucifix hoodie
-              gastropub schlitz chillwave taxidermy hot chicken copper mug.
-              Glossier cornhole bushwick YOLO twee paleo, food truck marfa hella
-              brunch williamsburg waistcoat literally vice kitsch. Roof party
-              photo booth beard fingerstache tumeric YOLO snackwave skateboard.{" "}
+              Här kommer ett eller flera stycken som beskriver denna denna
+              utbildnings tjänst, vilka den är till för samt annan info om
+              tjänsten. Det skall naturligtvis skrivas en riktig text här. Denna
+              text upprepar sig. Här kommer ett eller flera stycken som
+              beskriver denna denna utbildnings tjänst, vilka den är till för
+              samt annan info om tjänsten. Det skall naturligtvis skrivas en
+              riktig text här. Denna text upprepar sig. Här kommer ett eller
+              flera stycken som beskriver denna denna utbildnings tjänst, vilka
+              den är till för samt annan info om tjänsten. Det skall
+              naturligtvis skrivas en riktig text här. Denna text upprepar sig.
             </p>
           </Box>
         </Row>
         <Row backgroundcolor="#c53211">
           <Box gridcolumn="2/4">
-            <img
-              src="https://res.cloudinary.com/jongus/image/upload/c_scale,f_auto,q_auto:eco,w_768/v1536178421/sky-earth-space-working.jpg"
-              width="100%"
-            />
+            <img src="/f.jpg" width="100%" />
           </Box>
           <Box color="#e6dbc9" gridcolumn="4/8">
-            <h2>Namnet på en kurs</h2>
+            <h2>Grundkurs för funktionär</h2>
             <p>
-              Occupy vice cloud bread, truffaut four dollar toast tofu iceland.
-              Adaptogen wolf photo booth mixtape edison bulb, chia knausgaard
-              waistcoat tacos man bun schlitz kitsch dreamcatcher.
+              Skall du hjälpa till som funktionär för första gången? Gå den här
+              kursen och du kommer att få en licens att arbeta som grundläggande
+              funktionär vid båt eller aquabike tävlingar. Kursen tar cirka 20
+              minuter att genomföra.
             </p>
             <p>
               För att kunna delta i kursen måste du vara inloggad. Följ bara
@@ -91,10 +82,7 @@ class index extends React.Component {
         </Row>
         <Row backgroundcolor="#f7b733">
           <Box gridcolumn="2/4">
-            <img
-              src="https://res.cloudinary.com/jongus/image/upload/c_scale,f_auto,q_auto:eco,w_768/v1536178422/pexels-photo-1273443.jpg"
-              width="100%"
-            />
+            <img src="/tc.jpg" width="100%" />
           </Box>
           <Box gridcolumn="4/8">
             <h2>Namnet på en annan kurs</h2>
@@ -123,7 +111,7 @@ class index extends React.Component {
           </Box>
         </Row>
       </Layout>
-    );
+    )
   }
 }
-export default index;
+export default index
