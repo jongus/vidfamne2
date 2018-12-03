@@ -11,7 +11,7 @@ class index extends React.Component {
   state = { isSignedIn: false }
 
   globalSignedIn = data => {
-    console.log("dataFromChild", data)
+    console.log(`dataFromChild`, data)
     this.setState({ isSignedIn: data })
   }
 
@@ -23,9 +23,9 @@ class index extends React.Component {
         globalSignedIn={this.globalSignedIn}
       >
         <Helmet>
-          <meta name="Description" content={config.name + " - homepage"} />
+          <meta name="Description" content={config.name + ` - homepage`} />
           <title>{config.name} - homepage</title>
-          <meta property="og:title" content={config.name + " - homepage"} />
+          <meta property="og:title" content={config.name + ` - homepage`} />
           <meta property="og:description" content="Page content description" />
           <meta
             property="og:url"
@@ -33,7 +33,7 @@ class index extends React.Component {
           />
           <meta
             property="og:image"
-            content={config.url + "/social_share.jpg"}
+            content={config.url + `/social_share.jpg`}
           />
         </Helmet>
         <Row backgroundcolor="#e6dbc9">
@@ -55,10 +55,7 @@ class index extends React.Component {
         </Row>
         <Row backgroundcolor="#c53211">
           <Box gridcolumn="2/4">
-            <Img
-              fluid={this.props.data.imgf.childImageSharp.fluid}
-              width="100%"
-            />
+            <Img fluid={this.props.data.imgf.childImageSharp.fluid} />
           </Box>
           <Box color="#e6dbc9" gridcolumn="4/8">
             <h2>Grundkurs för funktionär</h2>
@@ -76,8 +73,8 @@ class index extends React.Component {
               <Link
                 to={
                   this.state.isSignedIn
-                    ? "/secure/abr3"
-                    : "/signin?p=/secure/abr3"
+                    ? `/secure/abr3`
+                    : `/signin?p=/secure/abr3`
                 }
               >
                 Grundkurs för funktionärer
@@ -87,10 +84,7 @@ class index extends React.Component {
         </Row>
         <Row backgroundcolor="#f7b733">
           <Box gridcolumn="2/4">
-            <Img
-              fluid={this.props.data.imgtc.childImageSharp.fluid}
-              width="100%"
-            />
+            <Img fluid={this.props.data.imgtc.childImageSharp.fluid} />
           </Box>
           <Box gridcolumn="4/8">
             <h2>Namnet på en annan kurs</h2>
