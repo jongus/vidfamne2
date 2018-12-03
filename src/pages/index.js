@@ -4,6 +4,8 @@ import { Row, Box } from "../components/lgm-grid.js"
 import Helmet from "react-helmet"
 import config from "../utils/config"
 import { Link } from "gatsby"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 class index extends React.Component {
   state = { isSignedIn: false }
@@ -53,7 +55,10 @@ class index extends React.Component {
         </Row>
         <Row backgroundcolor="#c53211">
           <Box gridcolumn="2/4">
-            <img src="/f.jpg" width="100%" />
+            <Img
+              fluid={this.props.data.imgf.childImageSharp.fluid}
+              width="100%"
+            />
           </Box>
           <Box color="#e6dbc9" gridcolumn="4/8">
             <h2>Grundkurs för funktionär</h2>
@@ -82,7 +87,10 @@ class index extends React.Component {
         </Row>
         <Row backgroundcolor="#f7b733">
           <Box gridcolumn="2/4">
-            <img src="/tc.jpg" width="100%" />
+            <Img
+              fluid={this.props.data.imgtc.childImageSharp.fluid}
+              width="100%"
+            />
           </Box>
           <Box gridcolumn="4/8">
             <h2>Namnet på en annan kurs</h2>
@@ -115,3 +123,24 @@ class index extends React.Component {
   }
 }
 export default index
+
+export const fluidImage = graphql`
+  fragment fluidImage on File {
+    childImageSharp {
+      fluid(maxWidth: 1056) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`
+
+export const pageQuery = graphql`
+  query {
+    imgf: file(relativePath: { eq: "images/f.jpg" }) {
+      ...fluidImage
+    }
+    imgtc: file(relativePath: { eq: "images/tc.jpg" }) {
+      ...fluidImage
+    }
+  }
+`

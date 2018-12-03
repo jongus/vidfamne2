@@ -5,18 +5,25 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-128411512-1",
+        trackingId: `UA-128411512-1`,
         head: false,
         anonymize: true,
-        respectDNT: true
-      }
+        respectDNT: true,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
-        path: `${__dirname}/src/`
-      }
+        path: `${__dirname}/src/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/images`,
+        name: `images`,
+      },
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -29,17 +36,19 @@ module.exports = {
             options: {
               maxWidth: 1024,
               linkImagesToOriginal: false,
-              withWebp: true
-            }
-          }
-        ]
-      }
+              withWebp: true,
+            },
+          },
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-typography`,
       options: {
-        pathToConfigModule: `src/utils/typography.js`
-      }
-    }
-  ]
-};
+        pathToConfigModule: `src/utils/typography.js`,
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+  ],
+}
