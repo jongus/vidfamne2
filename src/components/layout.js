@@ -1,48 +1,48 @@
-import React from "react";
-import { Menu, MenuItem } from "./lgm-menu.js";
-import { Row, Box } from "./lgm-grid.js";
-import { GlobalStyles, FooterLink, FooterRow, FooterPart } from "./style.js";
-import GDPRConsent from "./gdpr-consent.js";
-import Helmet from "react-helmet";
-import config from "../utils/config";
+import React from "react"
+import { Menu, MenuItem } from "./lgm-menu.js"
+import { Row, Box } from "./lgm-grid.js"
+import { GlobalStyles, FooterLink, FooterRow, FooterPart } from "./style.js"
+import GDPRConsent from "./gdpr-consent.js"
+import Helmet from "react-helmet"
+import config from "../utils/config"
 
-import faviconico16 from "../assets/favicon-16x16.png";
-import faviconico32 from "../assets/favicon-32x32.png";
-import appletouchicon from "../assets/apple-touch-icon.png";
-import safaripinnedtab from "../assets/safari-pinned-tab.svg";
+import faviconico16 from "../assets/favicon-16x16.png"
+import faviconico32 from "../assets/favicon-32x32.png"
+import appletouchicon from "../assets/apple-touch-icon.png"
+import safaripinnedtab from "../assets/safari-pinned-tab.svg"
 
-import CookieLogo from "../assets/cookie.png";
-import MailLogo from "../assets/mail.png";
+import CookieLogo from "../assets/cookie.png"
+import MailLogo from "../assets/mail.png"
 
-import { fire } from "../utils/fire";
+import { fire } from "../utils/fire"
 
 class Layout extends React.Component {
-  state = { isSignedIn: false };
+  state = { isSignedIn: false }
 
   componentDidMount = () => {
     if (typeof window !== "undefined") {
       this.unregisterAuthObserver = fire.auth().onAuthStateChanged(user => {
-        this.setState({ isSignedIn: !!user });
+        this.setState({ isSignedIn: !!user })
         if (this.props.globalSignedIn)
-          this.props.globalSignedIn(this.state.isSignedIn);
-        console.log("user", user);
-      });
+          this.props.globalSignedIn(this.state.isSignedIn)
+        console.log("user", user)
+      })
     }
-  };
+  }
 
   componentWillUnmount() {
-    this.unregisterAuthObserver();
+    this.unregisterAuthObserver()
   }
 
   render() {
-    const { children, myPath } = this.props;
-    console.log("Layout props", this.props);
+    const { children, myPath } = this.props
+    console.log("Layout props", this.props)
     if (myPath === "/signin") {
-      return <div>{children}</div>;
+      return <div>{children}</div>
     } else if (myPath === "/signout") {
-      return <div>{children}</div>;
+      return <div>{children}</div>
     } else if (myPath.includes("/secure/") && !this.state.isSignedIn) {
-      return <div>Du måste vara inloggad för att se denna sida.</div>;
+      return <div>Du måste vara inloggad för att se denna sida.</div>
     } else {
       return (
         <div>
@@ -131,13 +131,13 @@ class Layout extends React.Component {
             </Row>
             <Row backgroundcolor="#151515">
               <Box color="#e6dbc9">
-                <FooterRow>(CC BY 2.5 SE) SVERA/Jonas Gustafson</FooterRow>
+                <FooterRow>(CC BY-SA 4.0) SVERA</FooterRow>
               </Box>
             </Row>
           </GlobalStyles>
         </div>
-      );
+      )
     }
   }
 }
-export default Layout;
+export default Layout
