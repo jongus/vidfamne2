@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "gatsby";
-import styled from "styled-components";
-import Helmet from "react-helmet";
+import React from "react"
+import { Link } from "gatsby"
+import styled from "styled-components"
+import Helmet from "react-helmet"
 
 export default () => (
   <Main>
@@ -11,18 +11,18 @@ export default () => (
     </Helmet>
     <Text>
       <H1>404</H1>
-      <H4>ENGLISH:</H4>
-      <P>
-        I think you may be lost! I am so sorry but the page you were looking for
-        appears to have been moved, deleted or does not exist. You could go back
-        to where you were or head straight to our <Link to="/">home page.</Link>
-      </P>
       <H4>SVENSKA:</H4>
       <P>
         Jag tror att du kan ha gått vilse! Jag är så ledsen, men den sida du
         letade efter verkar ha flyttats, raderats eller existerar inte. Du kan
         gå tillbaka till var du var eller gå direkt till vår{" "}
         <Link to="/">hemsida</Link>
+      </P>
+      <H4>ENGLISH:</H4>
+      <P>
+        I think you may be lost! I am so sorry but the page you were looking for
+        appears to have been moved, deleted or does not exist. You could go back
+        to where you were or head straight to our <Link to="/">home page.</Link>
       </P>
       <H4>DEUTSCH:</H4>
       <P>
@@ -81,7 +81,7 @@ export default () => (
       </P>
     </Text>
   </Main>
-);
+)
 
 const Main = styled.div`
   //position: absolute;
@@ -93,7 +93,7 @@ const Main = styled.div`
   color: #e6dbc9;
   padding: 0;
   margin: 0;
-`;
+`
 
 const Text = styled.div`
   max-width: 37.5em;
@@ -105,16 +105,16 @@ const Text = styled.div`
   & a {
     color: inherit;
   }
-`;
+`
 
 const H1 = styled.h1`
   font-size: 7em;
   text-align: center;
-`;
+`
 const H4 = styled.h4`
   padding: 1em 0 0 0;
   margin: 0;
-`;
+`
 const P = styled.p`
   padding: 0 0 0.5em 0;
   margin: 0;
@@ -122,4 +122,4 @@ const P = styled.p`
   &:last-child {
     border-bottom: none;
   }
-`;
+`

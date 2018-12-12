@@ -6,8 +6,6 @@ import "firebase/auth"
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
 // import config from "../utils/store";
 
-// firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-
 class signin extends React.Component {
   uiConfig = {
     signInFlow: "redirect",
@@ -20,10 +18,8 @@ class signin extends React.Component {
       firebase.auth.EmailAuthProvider.PROVIDER_ID,
     ],
     callbacks: {
-      // signInSuccess: () => false
       signInSuccessWithAuthResult: (authResult, redirectUrl) => {
         console.log("signInSuccessWithAuthResult", authResult, redirectUrl)
-        // this.props.history.push("/");
         return true
       },
     },
