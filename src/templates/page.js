@@ -17,7 +17,6 @@ const MarkdownFormat = styled.div`
 
 class debug extends React.Component {
   state = { isSignedIn: false }
-  // post = this.data.markdownRemark
 
   globalSignedIn = data => {
     // console.log("dataFromChild", data)

@@ -4,7 +4,6 @@ import { auth } from "../utils/fire"
 import firebase from "firebase/app"
 import "firebase/auth"
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
-// import config from "../utils/store";
 
 class signin extends React.Component {
   uiConfig = {
