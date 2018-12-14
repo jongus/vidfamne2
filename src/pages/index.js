@@ -1,11 +1,10 @@
-import React from "react"
-import Layout from "../components/layout"
-import { Row, Box } from "../components/lgm-grid.js"
-import Helmet from "react-helmet"
-import config from "../utils/config"
-import { Link } from "gatsby"
-import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import React from 'react'
+import Layout from '../components/layout'
+import { Row, Box } from '../components/lgm-grid.js'
+import Helmet from 'react-helmet'
+import config from '../utils/config'
+import { Link, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 class index extends React.Component {
   state = { isSignedIn: false }

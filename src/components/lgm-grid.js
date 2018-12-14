@@ -1,19 +1,19 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react'
+import styled from 'styled-components'
 
 const config = {
   breakpoint: `768px`,
-  columnsize: `11em`
-};
+  columnsize: `11em`,
+}
 
 export class Row extends React.Component {
   selectBackgroundColor(primaryColor, secondaryColor) {
     if (secondaryColor) {
-      return secondaryColor;
+      return secondaryColor
     } else if (primaryColor) {
-      return primaryColor;
+      return primaryColor
     } else {
-      return "inherit";
+      return 'inherit'
     }
   }
 
@@ -43,25 +43,25 @@ export class Row extends React.Component {
           )}
         />
       </RowStyle>
-    );
+    )
   }
 }
 
 export const Box = styled.div`
-  grid-column: ${props => (props.gridcolumn ? props.gridcolumn : "2/8")};
+  grid-column: ${props => (props.gridcolumn ? props.gridcolumn : '2/8')};
   background-color: ${props =>
-    props.backgroundcolor ? props.backgroundcolor : "inherit"};
-  color: ${props => (props.color ? props.color : "inherit")};
+    props.backgroundcolor ? props.backgroundcolor : 'inherit'};
+  color: ${props => (props.color ? props.color : 'inherit')};
   margin: 0;
   padding: 0;
-`;
+`
 
 const RowStyle = styled.div`
   margin: 0;
   padding: 0;
   width: 100%;
   background-color: ${props =>
-    props.backgroundcolor ? props.backgroundcolor : "inherit"};
+    props.backgroundcolor ? props.backgroundcolor : 'inherit'};
   @media (min-width: ${props =>
       props.breakpoint ? props.breakpoint : config.breakpoint}) {
     display: grid;
@@ -75,7 +75,7 @@ const RowStyle = styled.div`
       )
       1fr;
   }
-`;
+`
 
 const WidePreStyle = styled.div`
   grid-column: 1/2;
@@ -83,12 +83,12 @@ const WidePreStyle = styled.div`
   margin: 0;
   padding: 0;
   background-color: ${props =>
-    props.backgroundcolor ? props.backgroundcolor : "inherit"};
+    props.backgroundcolor ? props.backgroundcolor : 'inherit'};
   @media (min-width: ${props =>
       props.breakpoint ? props.breakpoint : config.breakpoint}) {
     display: block;
   }
-`;
+`
 
 const WidePostStyle = styled.div`
   grid-column: 8/9;
@@ -96,9 +96,9 @@ const WidePostStyle = styled.div`
   margin: 0;
   padding: 0;
   background-color: ${props =>
-    props.backgroundcolor ? props.backgroundcolor : "inherit"};
+    props.backgroundcolor ? props.backgroundcolor : 'inherit'};
   @media (min-width: ${props =>
       props.breakpoint ? props.breakpoint : config.breakpoint}) {
     display: block;
   }
-`;
+`

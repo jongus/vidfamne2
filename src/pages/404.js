@@ -1,12 +1,11 @@
-import React from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
-import Helmet from "react-helmet"
+import React from 'react'
+import { Link } from 'gatsby'
+import styled from 'styled-components'
+import Helmet from 'react-helmet'
 
-export default () => (
+const page404 = () => (
   <Main>
     <Helmet>
-      <meta name="Description" content="Error page" />
       <title>Error page</title>
     </Helmet>
     <Text>
@@ -15,7 +14,7 @@ export default () => (
       <P>
         Jag tror att du kan ha gått vilse! Jag är så ledsen, men den sida du
         letade efter verkar ha flyttats, raderats eller existerar inte. Du kan
-        gå tillbaka till var du var eller gå direkt till vår{" "}
+        gå tillbaka till var du var eller gå direkt till vår{' '}
         <Link to="/">hemsida</Link>
       </P>
       <H4>ENGLISH:</H4>
@@ -28,28 +27,28 @@ export default () => (
       <P>
         Ich denke du bist verloren! Es tut mir so leid, aber die Seite, nach der
         Sie gesucht haben, wurde verschoben, gelöscht oder existiert nicht mehr.
-        Sie könnten zurückgehen, wo Sie waren, oder direkt auf unsere{" "}
+        Sie könnten zurückgehen, wo Sie waren, oder direkt auf unsere{' '}
         <Link to="/">Homepage</Link> gehen.
       </P>
       <H4>FRANÇAIS:</H4>
       <P>
         Je pense que vous pourriez être perdu! Je suis désolé mais la page que
         vous recherchez semble avoir été déplacée, supprimée ou n’existe pas.
-        Vous pouvez retourner où vous étiez ou aller directement à notre{" "}
+        Vous pouvez retourner où vous étiez ou aller directement à notre{' '}
         <Link to="/">page d'accueil</Link>.
       </P>
       <H4>NEDERLANDS:</H4>
       <P>
         Ik denk dat je misschien verdwaald bent! Het spijt me heel erg, maar de
         pagina waarnaar u op zoek was lijkt te zijn verplaatst, verwijderd of
-        bestaat niet. U kunt teruggaan naar waar u was of direct naar onze{" "}
+        bestaat niet. U kunt teruggaan naar waar u was of direct naar onze{' '}
         <Link to="/">startpagina</Link> gaan.
       </P>
       <H4>DANSK:</H4>
       <P>
         Jeg tror, du kan gå tabt! Jeg er ked af det, men siden du søgte synes at
         være blevet flyttet, slettet eller eksisterer ikke. Du kunne gå tilbage
-        til hvor du var eller gå direkte til vores{" "}
+        til hvor du var eller gå direkte til vores{' '}
         <Link to="/">hjemmeside</Link>.
       </P>
       <H4>NORSK:</H4>
@@ -68,7 +67,7 @@ export default () => (
       <P>
         ¡Creo que puedes estar perdido! Lo siento mucho, pero la página que
         estabas buscando parece haber sido movida, eliminada o no existe.
-        Podrías volver a donde estabas o dirigirte directamente a nuestra{" "}
+        Podrías volver a donde estabas o dirigirte directamente a nuestra{' '}
         <Link to="/">página de inicio</Link>.
       </P>
 
@@ -76,12 +75,13 @@ export default () => (
       <P>
         Penso che potresti essere perso! Mi dispiace, ma la pagina che stavi
         cercando sembra essere stata spostata, cancellata o non esiste. Potresti
-        tornare al punto in cui ti trovavi o andare direttamente alla nostra{" "}
+        tornare al punto in cui ti trovavi o andare direttamente alla nostra{' '}
         <Link to="/">home page</Link>.
       </P>
     </Text>
   </Main>
 )
+export default page404
 
 const Main = styled.div`
   //position: absolute;

@@ -1,6 +1,6 @@
 ---
 title: All MD
-date: "2017-07-29"
+date: '2017-07-29'
 description: >
   ALL MD hexagon, humblebrag cronut forage viral sartorial iPhone adaptogen vexillologist ennui. Heirloom vaporware vape tilde kale chips roof party. Shaman sustainable vegan glossier retro pour-over vape taxidermy.
 ---
@@ -63,17 +63,17 @@ Adipisicing voluptate ipsum culpa voluptate id aute laboris labore esse fugiat v
 
 ### Ordered List
 
-1.  Longan
-2.  Lychee
-3.  Excepteur ad cupidatat do elit laborum amet cillum reprehenderit consequat quis.
-    Deserunt officia esse aliquip consectetur duis ut labore laborum commodo aliquip aliquip velit pariatur dolore.
-4.  Marionberry
-5.  Melon
-    - Cantaloupe
-    - Honeydew
-    - Watermelon
-6.  Miracle fruit
-7.  Mulberry
+1. Longan
+2. Lychee
+3. Excepteur ad cupidatat do elit laborum amet cillum reprehenderit consequat quis.
+   Deserunt officia esse aliquip consectetur duis ut labore laborum commodo aliquip aliquip velit pariatur dolore.
+4. Marionberry
+5. Melon
+   - Cantaloupe
+   - Honeydew
+   - Watermelon
+6. Miracle fruit
+7. Mulberry
 
 ### Unordered List
 

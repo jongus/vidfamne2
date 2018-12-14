@@ -1,10 +1,10 @@
-import React from "react"
-import { graphql } from "gatsby"
-import styled from "styled-components"
-import Layout from "../components/layout"
-import { Row, Box } from "../components/lgm-grid.js"
-import Helmet from "react-helmet"
-import config from "../utils/config"
+import React from 'react'
+import { graphql } from 'gatsby'
+import styled from 'styled-components'
+import Layout from '../components/layout'
+import { Row, Box } from '../components/lgm-grid.js'
+import Helmet from 'react-helmet'
+import config from '../utils/config'
 
 const MarkdownFormat = styled.div`
   // Fill with css here for markdown data
@@ -13,7 +13,7 @@ const MarkdownFormat = styled.div`
   }
 `
 
-//export const post = data.markdownRemark
+// export const post = data.markdownRemark
 
 class debug extends React.Component {
   state = { isSignedIn: false }
@@ -42,7 +42,7 @@ class debug extends React.Component {
             property="og:title"
             content={
               config.name +
-              " - " +
+              ' - ' +
               this.props.data.markdownRemark.frontmatter.title
             }
           />
@@ -56,7 +56,7 @@ class debug extends React.Component {
           />
           <meta
             property="og:image"
-            content={config.url + "/social_share.jpg"}
+            content={config.url + '/social_share.jpg'}
           />
         </Helmet>
         <Row backgroundcolor="#e6dbc9" color="#2e3830">

@@ -1,31 +1,31 @@
-import React from "react"
-import { Menu, MenuItem } from "./lgm-menu.js"
-import { Row, Box } from "./lgm-grid.js"
-import { GlobalStyles, FooterLink, FooterRow, FooterPart } from "./style.js"
-import GDPRConsent from "./gdpr-consent.js"
-import Helmet from "react-helmet"
-import config from "../utils/config"
+import React from 'react'
+import { Menu, MenuItem } from './lgm-menu.js'
+import { Row, Box } from './lgm-grid.js'
+import { GlobalStyles, FooterLink, FooterRow, FooterPart } from './style.js'
+import GDPRConsent from './gdpr-consent.js'
+import Helmet from 'react-helmet'
+import config from '../utils/config'
 
-import faviconico16 from "../assets/favicon-16x16.png"
-import faviconico32 from "../assets/favicon-32x32.png"
-import appletouchicon from "../assets/apple-touch-icon.png"
-import safaripinnedtab from "../assets/safari-pinned-tab.svg"
+import faviconico16 from '../assets/favicon-16x16.png'
+import faviconico32 from '../assets/favicon-32x32.png'
+import appletouchicon from '../assets/apple-touch-icon.png'
+import safaripinnedtab from '../assets/safari-pinned-tab.svg'
 
-import CookieLogo from "../assets/cookie.png"
-import MailLogo from "../assets/mail.png"
+import CookieLogo from '../assets/cookie.png'
+import MailLogo from '../assets/mail.png'
 
-import { fire } from "../utils/fire"
+import { fire } from '../utils/fire'
 
 class Layout extends React.Component {
   state = { isSignedIn: false }
 
   componentDidMount = () => {
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       this.unregisterAuthObserver = fire.auth().onAuthStateChanged(user => {
         this.setState({ isSignedIn: !!user })
         if (this.props.globalSignedIn)
           this.props.globalSignedIn(this.state.isSignedIn)
-        console.log("user", user)
+        console.log('user', user)
       })
     }
   }
@@ -36,12 +36,12 @@ class Layout extends React.Component {
 
   render() {
     const { children, myPath } = this.props
-    console.log("Layout props", this.props)
-    if (myPath === "/signin") {
+    console.log('Layout props', this.props)
+    if (myPath === '/signin') {
       return <div>{children}</div>
-    } else if (myPath === "/signout") {
+    } else if (myPath === '/signout') {
       return <div>{children}</div>
-    } else if (myPath.includes("/secure/") && !this.state.isSignedIn) {
+    } else if (myPath.includes('/secure/') && !this.state.isSignedIn) {
       return <div>Du måste vara inloggad för att se denna sida.</div>
     } else {
       return (
@@ -93,7 +93,7 @@ class Layout extends React.Component {
                   {this.state.isSignedIn ? (
                     <MenuItem to="/signout" text="Logga ut" />
                   ) : (
-                    <MenuItem to={"/signin?p=" + myPath} text="Logga in" />
+                    <MenuItem to={'/signin?p=' + myPath} text="Logga in" />
                   )}
                 </Menu>
               </Box>
