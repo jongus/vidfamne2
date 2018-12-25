@@ -90,6 +90,7 @@ class Layout extends React.Component {
                   homecolor="#e6dbc9"
                 >
                   <MenuItem to="/" text="Hem" />
+                  <MenuItem to="/allmd" text="allmd" />
                   {this.state.isSignedIn ? (
                     <MenuItem to="/signout" text="Logga ut" />
                   ) : (

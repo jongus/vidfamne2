@@ -58,7 +58,6 @@ class debug extends React.Component {
             property="og:image"
             content={config.url + '/social_share.jpg'}
           />
-          <script src="/webcomponent.js" />
         </Helmet>
         <Row backgroundcolor="#e6dbc9" color="#2e3830">
           <Box>
