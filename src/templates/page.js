@@ -15,7 +15,7 @@ const MarkdownFormat = styled.div`
 
 // export const post = data.markdownRemark
 
-class debug extends React.Component {
+class page extends React.Component {
   state = { isSignedIn: false }
 
   globalSignedIn = data => {
@@ -72,7 +72,7 @@ class debug extends React.Component {
     )
   }
 }
-export default debug
+export default page
 
 export const query = graphql`
   query($slug: String!) {
