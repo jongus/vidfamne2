@@ -23,6 +23,7 @@ export default class HTML extends React.Component {
           />
           {this.props.postBodyComponents}
           <script src="/webcomponent.js" />
+          <script src="http://edx.motorsporth2o.se/x/lgmquiz.js" />
         </body>
       </html>
     )
