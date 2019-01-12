@@ -7,11 +7,10 @@ description: >
 
 # Heading one
 
-<popup-info img="/alt.png" data-text="Your card validation code (CVC) is an extra security feature — it is the last 3 or 4 numbers on the back of your card."></popup-info>
-
 Aint sit cillum pariatur eiusmod nulla pariatur ipsum. Sit laborum anim qui mollit tempor pariatur nisi minim dolor. Aliquip et adipisicing sit sit fugiat commodo id sunt. Nostrud enim ad commodo incididunt cupidatat in ullamco ullamco Lorem cupidatat velit enim et Lorem. Ut laborum cillum laboris fugiat culpa sint irure do reprehenderit culpa occaecat. Exercitation esse mollit tempor magna aliqua in occaecat aliquip veniam reprehenderit nisi dolor in laboris dolore velit.
 
-<lgm-single-answer first="9" last="5"></lgm-single-answer>
+<umiak-single-answer heading="Fråga 8, geografi." question="Offal ethical austin franzen. Poutine vaporware butcher 3 wolf moon PBR&amp;B, semiotics glossier health goth kickstarter keytar direct trade squid offal sriracha. Lyft snackwave hella flannel 8-bit locavore selvage la croix man braid keytar fixie drinking vinegar. Lumbersexual gluten-free pickled kale chips hell of gentrify cardigan lomo plaid wayfarers iPhone normcore brunch vegan?" alternative_a="Yes!" alternative_b="Man bun deep v williamsburg mixtape, direct trade keffiyeh sartorial letterpress brooklyn blog viral franzen hexagon. Kickstarter shabby chic four dollar toast sustainable. Aesthetic 90's dreamcatcher activated charcoal butcher meh." alternative_c="Kanske, eller inte riktigt..." alternative_d="Ja, typ så!" />
+</umiak-single-answer>
 
 ## Heading two
 
