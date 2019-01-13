@@ -23,6 +23,14 @@ class page extends React.Component {
     this.setState({ isSignedIn: data })
   }
 
+  componentDidMount() {
+    console.log('componentDidMount: page.js')
+    var x = document.querySelector('umiak-single-answer')
+    if (x != null) {
+      // x.heading = 'test'
+    }
+  }
+
   render() {
     // console.log("testx render props", this.props)
     return (

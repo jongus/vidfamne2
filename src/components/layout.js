@@ -26,6 +26,10 @@ class Layout extends React.Component {
         if (this.props.globalSignedIn)
           this.props.globalSignedIn(this.state.isSignedIn)
         console.log('user', user)
+        var x = document.querySelector('umiak-single-answer')
+        if (x != null) {
+          x.heading = 'tesTUTAt'
+        }
       })
     }
   }
